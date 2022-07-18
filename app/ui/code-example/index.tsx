@@ -2,13 +2,21 @@ import Editor from "@monaco-editor/react";
 
 type Props = {
   code: string;
-  language?: string
+  language?: string;
   width?: string;
+  suggestions?: boolean;
+  onChange?: (code: string) => void;
 };
 
-export function CodeExample({ code, language = 'typescript', width = "100%" }: Props) {
+export function CodeExample({
+  code,
+  language = "typescript",
+  width = "100%",
+  suggestions = true,
+  onChange,
+}: Props) {
   const trimmedCode = code.trim();
-  const lines = trimmedCode.split('\n').length
+  const lines = trimmedCode.split("\n").length;
   const height = lines * 36 + 58;
 
   return (
@@ -36,10 +44,12 @@ export function CodeExample({ code, language = 'typescript', width = "100%" }: P
         minimap: {
           enabled: false,
         },
-        renderLineHighlight: 'none',
+        renderLineHighlight: "none",
         scrollBeyondLastLine: false,
         overviewRulerLanes: 0,
+        quickSuggestions: suggestions,
       }}
+      onChange={(code) => onChange?.(code ?? "")}
     />
   );
 }

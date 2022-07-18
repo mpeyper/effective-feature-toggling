@@ -1,9 +1,12 @@
-import { useLoaderData } from "@remix-run/react";
+import type { ReactNode } from "react";
+import { useMemo, useState } from "react";
+import * as ini from "ini";
+import { CodeExample } from "~/ui/code-example";
+import { Drawer } from "~/ui/drawer";
 import { SideBySide } from "~/ui/layout/side-by-side";
 import { Slide } from "~/ui/slide";
 import { DotPoints } from "~/ui/typography/dot-points";
 import { SlideHeader } from "~/ui/typography/slide-header";
-import { isFeatureEnabled } from "~/utils/isFeatureEnabled";
 
 const topics = [
   "Overview of what feature toggles are",
@@ -12,49 +15,77 @@ const topics = [
   "Questions and discussions",
 ];
 
-function CrapSlide() {
+const initialFeatures = `
+PRESENTATION_MODE=false
+`;
+
+function useFeatureEnabled(key: string) {
+  const [featuresIni, setFeaturesIni] = useState(initialFeatures);
+
+  const features = useMemo(() => {
+    return ini.parse(featuresIni);
+  }, [featuresIni]);
+
+  const config = useMemo(
+    () => ({
+      text: featuresIni,
+      setText: setFeaturesIni,
+    }),
+    [featuresIni]
+  );
+
+  return [features[key] === true, config] as const;
+}
+
+function ScaledContent({
+  enabled,
+  children,
+}: {
+  enabled: Boolean;
+  children: ReactNode;
+}) {
   return (
-    <Slide>
-      <h2 className="absolute top-5 left-20 font-header text-4xl font-bold text-sky-600">Agenda</h2>
-      <ul className="list-disc">
-        {topics.map((point, index) => (
-          <li
-            key={index}
-            className="font-data font-bold italic align-middle text-2xl leading-relaxed text-slate-300"
-          >
-            {point}
-          </li>
-        ))}
-      </ul>
-    </Slide>
+    <div
+      className={`ease-in-out transition-all duration-300 transform-gpu ${
+        enabled ? "scale-100" : "scale-[0.25]"
+      }`}
+    >
+      {children}
+    </div>
   );
 }
 
-export function getAgendaData() {
-  return {
-    features: {
-      PRESENTATION_MODE: isFeatureEnabled('PRESENTATION_MODE'),
-    },
-  }
-}
-
 export function Agenda() {
-  const { features } = useLoaderData();
-
-  if (!features.PRESENTATION_MODE) {
-    return <CrapSlide />;
-  }
+  const [presentationModeEnabled, config] =
+    useFeatureEnabled("PRESENTATION_MODE");
 
   return (
     <Slide>
+      <Drawer>
+        <div>
+          <div className="w-1/2 h-full bg-[#1e1e1e] absolute" aria-hidden />
+          <div
+            className="w-full h-1/2 bottom-0 bg-[#1e1e1e] absolute"
+            aria-hidden
+          />
+          <CodeExample
+            code={config.text}
+            language="ini"
+            suggestions={false}
+            onChange={config.setText}
+          />
+        </div>
+      </Drawer>
       <SlideHeader>Agenda</SlideHeader>
-      <SideBySide
-        columns={10}
-        leftSpan={4}
-        rightSpan={6}
-        left={<Image />}
-        right={<DotPoints points={topics} />}
-      />
+      <ScaledContent enabled={presentationModeEnabled}>
+        <SideBySide
+          columns={10}
+          leftSpan={4}
+          rightSpan={6}
+          left={<Image />}
+          right={<DotPoints points={topics} />}
+        />
+      </ScaledContent>
     </Slide>
   );
 }

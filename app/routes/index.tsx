@@ -1,6 +1,5 @@
-import { json } from "@remix-run/node";
 import { Title } from "~/content/0.title";
-import { Agenda, getAgendaData } from "~/content/1.agenda";
+import { Agenda } from "~/content/1.agenda";
 import { TheProblem } from "~/content/2.the-problem";
 import { TheSolution } from "~/content/3.the-solution";
 import { SettingToggles } from "~/content/4.setting-toggles";
@@ -17,10 +16,6 @@ import { WhyUseFeatureToggles } from "~/content/14.why-use-feature-toggles";
 import { Questions } from "~/content/15.questions";
 import { HowManyToggles } from "~/content/11.0.how-many-toggles";
 import { WhenToFeatureToggle } from "~/content/3.1.when-to-use-feature-toggles";
-
-export async function loader() {
-  return json({ ...getAgendaData() });
-}
 
 export default function Index() {
   return (

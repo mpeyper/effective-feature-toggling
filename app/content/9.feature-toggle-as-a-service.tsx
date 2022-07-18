@@ -18,16 +18,13 @@ const pros = [
     technical task
   </>,
   <>
-    Can enabled even more advanced
+    Can enable even more advanced
     <br />
     toggling strategies
   </>,
 ];
 
-const cons = [
-  "It's quite expensive",
-  "No on-premise option"
-];
+const cons = ["It's quite expensive", "No on-premise option"];
 
 const user = {
   name: "Tech Guild",
@@ -35,7 +32,7 @@ const user = {
 };
 
 enum Feature {
-  EXTRA_INFORMATION = 'launch-darkly-extra-information'
+  EXTRA_INFORMATION = "launch-darkly-extra-information",
 }
 
 function useFeatureEnabled(feature: Feature) {
@@ -53,7 +50,7 @@ function useFeatureEnabled(feature: Feature) {
     });
   }, [feature]);
 
-  return isEnabled
+  return isEnabled;
 }
 
 export function FeatureToggleAsAService() {

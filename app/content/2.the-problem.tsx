@@ -20,13 +20,13 @@ gitGraph
   checkout feature1
   commit
   checkout main
-  merge feature1 tag: "Ready"
+  merge feature1 tag: "feature1 ready"
   checkout feature2
   commit
   commit
   checkout main
   checkout main
-  merge feature2 tag: "Ready"
+  merge feature2 tag: "feature2 ready"
   commit
 `;
 
@@ -35,7 +35,9 @@ export function TheProblem() {
     <Slide>
       <SlideHeader>The Problem</SlideHeader>
       <Stacked>
-        <Diagram nodes={blockedFeatures} />
+        <div className="scale-150 transform-gpu">
+          <Diagram nodes={blockedFeatures} />
+        </div>
       </Stacked>
     </Slide>
   );
