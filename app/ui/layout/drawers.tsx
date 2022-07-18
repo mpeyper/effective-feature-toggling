@@ -16,8 +16,8 @@ export function Drawer({ children }: Props) {
     >
       {children}
       <button
-        className={`bg-[#1e1e1e] text-sky-600 text-3xl font-bold rounded-r absolute bottom-0 w-4 ease-in-out transition-all duration-300 z-30 transform-gpu ${
-          drawerOpen ? "right-0" : "-right-4"
+        className={`text-sky-600 text-3xl font-bold rounded-r absolute bottom-0 w-8 ease-in-out transition-all duration-300 z-30 transform-gpu ${
+          drawerOpen ? "right-0" : "-right-8"
         }`}
         onClick={() => setDrawerOpen((open) => !open)}
       >

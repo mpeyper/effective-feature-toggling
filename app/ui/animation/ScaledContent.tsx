@@ -8,7 +8,7 @@ type Props = {
 export function ScaledContent({ enabled, children }: Props) {
   return (
     <div
-      className={`ease-in-out transition-all duration-500 transform-gpu ${
+      className={`w-full ease-in-out transition-all duration-500 transform-gpu ${
         enabled ? "scale-100" : "scale-[0.25]"
       }`}
     >

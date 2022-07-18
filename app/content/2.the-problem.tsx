@@ -35,7 +35,7 @@ export function TheProblem() {
     <Slide>
       <SlideHeader>The Problem</SlideHeader>
       <Stacked>
-        <div className="scale-150 transform-gpu">
+        <div className="scale-[2] transform-gpu">
           <Diagram nodes={blockedFeatures} />
         </div>
       </Stacked>

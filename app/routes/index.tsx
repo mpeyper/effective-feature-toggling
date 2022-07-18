@@ -1,5 +1,6 @@
 import { Title } from "~/content/0.title";
-import { Agenda } from "~/content/1.agenda";
+import { Agenda } from "~/content/1.0.agenda";
+import { Categories } from "~/content/1.1.categories";
 import { TheProblem } from "~/content/2.the-problem";
 import { TheSolution } from "~/content/3.0.the-solution";
 import { WhenToFeatureToggle } from "~/content/3.1.when-to-use-feature-toggles";
@@ -22,6 +23,7 @@ export default function Index() {
     <main className="h-screen overflow-scroll scroll-smooth snap-mandatory snap-y">
       <Title />
       <Agenda />
+      <Categories />
       <TheProblem />
       <TheSolution />
       <WhenToFeatureToggle />
