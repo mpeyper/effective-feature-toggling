@@ -1,8 +1,3 @@
-import type { ReactNode } from "react";
-import { useMemo, useState } from "react";
-import * as ini from "ini";
-import { CodeExample } from "~/ui/code-example";
-import { Drawer } from "~/ui/drawer";
 import { SideBySide } from "~/ui/layout/side-by-side";
 import { Slide } from "~/ui/slide";
 import { DotPoints } from "~/ui/typography/dot-points";
@@ -15,77 +10,17 @@ const topics = [
   "Questions and discussions",
 ];
 
-const initialFeatures = `
-PRESENTATION_MODE=false
-`;
-
-function useFeatureEnabled(key: string) {
-  const [featuresIni, setFeaturesIni] = useState(initialFeatures);
-
-  const features = useMemo(() => {
-    return ini.parse(featuresIni);
-  }, [featuresIni]);
-
-  const config = useMemo(
-    () => ({
-      text: featuresIni,
-      setText: setFeaturesIni,
-    }),
-    [featuresIni]
-  );
-
-  return [features[key] === true, config] as const;
-}
-
-function ScaledContent({
-  enabled,
-  children,
-}: {
-  enabled: Boolean;
-  children: ReactNode;
-}) {
-  return (
-    <div
-      className={`ease-in-out transition-all duration-300 transform-gpu ${
-        enabled ? "scale-100" : "scale-[0.25]"
-      }`}
-    >
-      {children}
-    </div>
-  );
-}
-
 export function Agenda() {
-  const [presentationModeEnabled, config] =
-    useFeatureEnabled("PRESENTATION_MODE");
-
   return (
     <Slide>
-      <Drawer>
-        <div>
-          <div className="w-1/2 h-full bg-[#1e1e1e] absolute" aria-hidden />
-          <div
-            className="w-full h-1/2 bottom-0 bg-[#1e1e1e] absolute"
-            aria-hidden
-          />
-          <CodeExample
-            code={config.text}
-            language="ini"
-            suggestions={false}
-            onChange={config.setText}
-          />
-        </div>
-      </Drawer>
       <SlideHeader>Agenda</SlideHeader>
-      <ScaledContent enabled={presentationModeEnabled}>
-        <SideBySide
-          columns={10}
-          leftSpan={4}
-          rightSpan={6}
-          left={<Image />}
-          right={<DotPoints points={topics} />}
-        />
-      </ScaledContent>
+      <SideBySide
+        columns={10}
+        leftSpan={4}
+        rightSpan={6}
+        left={<Image />}
+        right={<DotPoints points={topics} />}
+      />
     </Slide>
   );
 }
