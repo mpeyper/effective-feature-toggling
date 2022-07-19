@@ -20,7 +20,8 @@ import { OptimiseCleanup0 } from "~/content/12.optimise-cleanup-0";
 import { OptimiseCleanup1 } from "~/content/13.optimise-cleanup-1";
 import { WhyUseFeatureToggles } from "~/content/14.why-use-feature-toggles";
 import { References } from "~/content/15.references";
-import { Questions } from "~/content/15.questions";
+import { Hiring } from "~/content/16.hiring";
+import { Questions } from "~/content/17.questions";
 
 export default function Index() {
   return (
@@ -47,6 +48,7 @@ export default function Index() {
       <OptimiseCleanup1 />
       <WhyUseFeatureToggles />
       <References />
+      <Hiring />
       <Questions />
     </main>
   );

@@ -1,19 +1,15 @@
 import { Slide } from "~/ui/slide";
 import { SlideHeader } from "~/ui/typography/slide-header";
-import { DotPoints } from "~/ui/typography/dot-points";
-
-const points = [
-  "https://martinfowler.com/articles/feature-toggles.html",
-  "https://www.atlassian.com/continuous-delivery/principles/feature-flags",
-  "https://resources.launchdarkly.com",
-];
+import { Text } from "~/ui/typography/text";
 
 export function References() {
   return (
     <Slide>
       <SlideHeader>Further Reading</SlideHeader>
       <div className="mb-48">
-      <DotPoints points={points} />
+        <Text>https://martinfowler.com/articles/feature-toggles.html</Text>
+        <Text>https://www.atlassian.com/continuous-delivery/principles/feature-flags</Text>
+        <Text>https://resources.launchdarkly.com</Text>
       </div>
       <Image />
     </Slide>
