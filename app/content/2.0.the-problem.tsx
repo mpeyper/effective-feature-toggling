@@ -25,12 +25,11 @@ gitGraph
   commit
   commit
   checkout main
-  checkout main
   merge feature2 tag: "feature2 ready"
   commit
 `;
 
-export function TheProblem() {
+export function TheProblem0() {
   return (
     <Slide>
       <SlideHeader>The Problem</SlideHeader>

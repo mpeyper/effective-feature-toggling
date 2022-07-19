@@ -1,7 +1,8 @@
 import { Title } from "~/content/0.title";
 import { Agenda } from "~/content/1.0.agenda";
 import { Categories } from "~/content/1.1.categories";
-import { TheProblem } from "~/content/2.the-problem";
+import { TheProblem0 } from "~/content/2.0.the-problem";
+import { TheProblem1 } from "~/content/2.1.the-problem";
 import { TheSolution } from "~/content/3.0.the-solution";
 import { WhenToFeatureToggle } from "~/content/3.1.when-to-use-feature-toggles";
 import { SettingToggles } from "~/content/4.setting-toggles";
@@ -24,7 +25,8 @@ export default function Index() {
       <Title />
       <Agenda />
       <Categories />
-      <TheProblem />
+      <TheProblem0 />
+      <TheProblem1 />
       <TheSolution />
       <WhenToFeatureToggle />
       <SettingToggles />
