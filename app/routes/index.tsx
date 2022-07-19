@@ -19,6 +19,7 @@ import { CleaningUp } from "~/content/11.2.cleaning-up";
 import { OptimiseCleanup0 } from "~/content/12.optimise-cleanup-0";
 import { OptimiseCleanup1 } from "~/content/13.optimise-cleanup-1";
 import { WhyUseFeatureToggles } from "~/content/14.why-use-feature-toggles";
+import { References } from "~/content/15.references";
 import { Questions } from "~/content/15.questions";
 
 export default function Index() {
@@ -45,6 +46,7 @@ export default function Index() {
       <OptimiseCleanup0 />
       <OptimiseCleanup1 />
       <WhyUseFeatureToggles />
+      <References />
       <Questions />
     </main>
   );
