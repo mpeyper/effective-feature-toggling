@@ -4,7 +4,8 @@ import { Categories } from "~/content/1.1.categories";
 import { TheProblem0 } from "~/content/2.0.the-problem";
 import { TheProblem1 } from "~/content/2.1.the-problem";
 import { TheSolution } from "~/content/3.0.the-solution";
-import { WhenToFeatureToggle } from "~/content/3.1.when-to-use-feature-toggles";
+import { WhenNotToFeatureToggle } from "~/content/3.1.when-not-to-use-feature-toggles";
+import { WhenNotToFeatureToggleAnswers } from "~/content/3.2.when-not-to-use-feature-toggles-answers";
 import { SettingToggles } from "~/content/4.setting-toggles";
 import { EncapsulateChecks } from "~/content/5.encapsulate-check";
 import { EnablingCICD } from "~/content/6.enabling-cicd";
@@ -13,7 +14,8 @@ import { TypesOfToggles } from "~/content/8.0.types";
 import { FeatureToggleAsAService } from "~/content/9.feature-toggle-as-a-service";
 import { TestingToggles } from "~/content/10.testing-toggles";
 import { HowManyToggles } from "~/content/11.0.how-many-toggles";
-import { CleaningUp } from "~/content/11.1.cleaning-up";
+import { HowManyTogglesAnswers } from "~/content/11.1.how-many-toggles-answers";
+import { CleaningUp } from "~/content/11.2.cleaning-up";
 import { OptimiseCleanup0 } from "~/content/12.optimise-cleanup-0";
 import { OptimiseCleanup1 } from "~/content/13.optimise-cleanup-1";
 import { WhyUseFeatureToggles } from "~/content/14.why-use-feature-toggles";
@@ -28,7 +30,8 @@ export default function Index() {
       <TheProblem0 />
       <TheProblem1 />
       <TheSolution />
-      <WhenToFeatureToggle />
+      <WhenNotToFeatureToggle />
+      <WhenNotToFeatureToggleAnswers />
       <SettingToggles />
       <EncapsulateChecks />
       <EnablingCICD />
@@ -37,6 +40,7 @@ export default function Index() {
       <FeatureToggleAsAService />
       <TestingToggles />
       <HowManyToggles />
+      <HowManyTogglesAnswers />
       <CleaningUp />
       <OptimiseCleanup0 />
       <OptimiseCleanup1 />

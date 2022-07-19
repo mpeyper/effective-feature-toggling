@@ -2,7 +2,7 @@ import { Slide } from "~/ui/slide";
 import { SlideHeader } from "~/ui/typography/slide-header";
 import { TitleHeader } from "~/ui/typography/title-header";
 
-export function WhenToFeatureToggle() {
+export function WhenNotToFeatureToggle() {
   return (
     <Slide>
       <SlideHeader>Discussion</SlideHeader>

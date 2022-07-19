@@ -45,7 +45,7 @@ export function SettingToggles() {
           <CodeExample code={envVariables} language="ini" />
         </div>
         <div>
-          <Text>Or you favourite key-value store</Text>
+          <Text>Or your favourite key-value store</Text>
           <SideBySide
             left={<DotPoints points={["etcd", "Consul"]} />}
             right={<DotPoints points={["ZooKeeper", "whatever"]} />}

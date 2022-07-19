@@ -8,7 +8,7 @@ const points = [
     <br />a toggle to remove it
   </>,
   <>
-    Toggles that depend on other toggles leads to
+    Toggles that depend on other toggles lead to
     <br />
     horror scenarios
   </>,
