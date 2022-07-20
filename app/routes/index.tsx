@@ -7,11 +7,11 @@ import { TheProblem1 } from "~/content/2.1.the-problem";
 import { TheSolution0 } from "~/content/3.0.the-solution";
 import { TheSolution1 } from "~/content/3.1.the-solution";
 import { EnablingCICD } from "~/content/3.2.enabling-cicd";
+import { SettingToggles } from "~/content/4.0.setting-toggles";
+import { HandlingEnvironments } from "~/content/4.1.handling-environments";
+import { EncapsulateChecks } from "~/content/5.encapsulate-check";
 import { WhenNotToFeatureToggles0 } from "~/content/6.0.when-not-to-use-feature-toggles";
 import { WhenNotToFeatureToggles1 } from "~/content/6.1.when-not-to-use-feature-toggles";
-import { SettingToggles } from "~/content/4.0.setting-toggles";
-import { EncapsulateChecks } from "~/content/5.encapsulate-check";
-import { HandlingEnvironments } from "~/content/4.1.handling-environments";
 import { TypesOfToggles } from "~/content/7.0.types";
 import { FeatureToggleAsAService } from "~/content/8.feature-toggle-as-a-service";
 import { TestingToggles } from "~/content/9.testing-toggles";
@@ -38,11 +38,11 @@ export default function Index() {
         <TheSolution0 />
         <TheSolution1 />
         <EnablingCICD />
+        <SettingToggles />
+        <HandlingEnvironments />
+        <EncapsulateChecks />
         <WhenNotToFeatureToggles0 />
         <WhenNotToFeatureToggles1 />
-        <SettingToggles />
-        <EncapsulateChecks />
-        <HandlingEnvironments />
         <TypesOfToggles />
         <FeatureToggleAsAService />
         <TestingToggles />

@@ -1,9 +1,9 @@
 import { Slide } from "~/ui/slide";
 import { TitleHeader } from "~/ui/typography/title-header";
-import { BooleanToggles } from "./8.1.boolean";
-import { DateToggles } from "./8.2.dates";
-import { VersionToggles } from "./8.3.versions";
-import { UserToggles } from "./8.4.user";
+import { BooleanToggles } from "./7.1.boolean";
+import { DateToggles } from "./7.2.dates";
+import { VersionToggles } from "./7.3.versions";
+import { UserToggles } from "./7.4.user";
 
 export function TypesOfToggles() {
   return (

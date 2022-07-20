@@ -7,6 +7,8 @@ const topics = [
   "Not integrating code often",
   "Working solo or on a small team",
   "Nothing is live yet",
+  "Minor styling updates",
+  "Hotfixing production bugs"
 ];
 
 export function WhenNotToFeatureToggles1() {
