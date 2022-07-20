@@ -9,7 +9,7 @@ const topics = [
   "Nothing is live yet",
 ];
 
-export function WhenNotToFeatureToggleAnswers() {
+export function WhenNotToFeatureToggles1() {
   return (
     <Slide>
       <SlideHeader>My thoughts</SlideHeader>

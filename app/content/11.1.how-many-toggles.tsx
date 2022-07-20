@@ -9,7 +9,7 @@ const topics = [
   "Keep as low as you can",
 ];
 
-export function HowManyTogglesAnswers() {
+export function HowManyToggles1() {
   return (
     <Slide>
       <SlideHeader>My thoughts</SlideHeader>

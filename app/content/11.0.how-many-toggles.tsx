@@ -2,7 +2,7 @@ import { Slide } from "~/ui/slide";
 import { SlideHeader } from "~/ui/typography/slide-header";
 import { TitleHeader } from "~/ui/typography/title-header";
 
-export function HowManyToggles() {
+export function HowManyToggles0() {
   return (
     <Slide>
       <SlideHeader>Discussion</SlideHeader>
