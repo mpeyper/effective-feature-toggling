@@ -4,7 +4,7 @@ import { DotPoints } from "~/ui/typography/dot-points";
 
 const points = [
   <>
-    Raise a ticket in you backlog as soon as you add
+    Raise a ticket in your backlog as soon as you add
     <br />a toggle to remove it
   </>,
   <>

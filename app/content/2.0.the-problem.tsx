@@ -32,7 +32,7 @@ gitGraph
 export function TheProblem0() {
   return (
     <Slide>
-      <SlideHeader>The Problem</SlideHeader>
+      <SlideHeader>The problem</SlideHeader>
       <Stacked>
         <div className="scale-[2] transform-gpu">
           <Diagram nodes={blockedFeatures} />

@@ -9,7 +9,7 @@ import { config } from "~/config";
 
 const pros = [
   <>
-    Any type of toggles you want out
+    Any type of toggles you want, out
     <br />
     of the box
   </>,

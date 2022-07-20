@@ -12,7 +12,7 @@ const topics = [
 export function HowManyTogglesAnswers() {
   return (
     <Slide>
-      <SlideHeader>My Thoughts</SlideHeader>
+      <SlideHeader>My thoughts</SlideHeader>
       <SideBySide right={<Image />} left={<DotPoints points={topics} />} columns={10} leftSpan={6} rightSpan={4} />
     </Slide>
   );

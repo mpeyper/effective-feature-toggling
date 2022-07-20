@@ -53,7 +53,7 @@ export function AccountBalance({ account }) {
 export function OptimiseCleanup2() {
   return (
     <Slide>
-      <SlideHeader>Tip — Optimise for cleanup</SlideHeader>
+      <SlideHeader>Tip — Optimise for cleanup<br />Branch by abstraction</SlideHeader>
       <ToggleTab feature="FEATURE_DIFF_VIEW">
         {(diffViewEnabled) => (
           <div className="w-full h-full scale-75 mt-20 flex flex-col items-center justify-center">

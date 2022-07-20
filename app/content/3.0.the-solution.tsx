@@ -31,7 +31,7 @@ export function TheSolution() {
         {(solutionEnabled) => (
           <>
             <FadedContent enabled={solutionEnabled}>
-              <SlideHeader>The solution: Feature Toggles</SlideHeader>
+              <SlideHeader>The solution<br />Feature toggles!</SlideHeader>
               <div className="w-full h-full flex flex-col items-center justify-center">
                 <SideBySide
                   left={<DotPoints points={points} />}

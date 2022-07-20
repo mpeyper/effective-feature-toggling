@@ -5,7 +5,7 @@ import { SideBySide } from "~/ui/layout/side-by-side";
 import { DotPoints } from "~/ui/typography/dot-points";
 
 const points = [
-  <>Test functionality with the<br />toggle is enabled <strong>AND</strong><br />disabled</>,
+  <>Test functionality with the toggle enabled <strong className="underline underline-offset-8">AND</strong> disabled</>,
 ];
 
 const example = `
@@ -37,7 +37,7 @@ describe('the feature tests', () => {
 export function TestingToggles() {
   return (
     <Slide>
-      <SlideHeader>Tip — Testing Toggles</SlideHeader>
+      <SlideHeader>Tip — Testing toggles</SlideHeader>
       <div className="w-full mt-20">
         <SideBySide
           columns={10}
