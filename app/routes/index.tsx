@@ -17,8 +17,9 @@ import { TestingToggles } from "~/content/10.testing-toggles";
 import { HowManyToggles } from "~/content/11.0.how-many-toggles";
 import { HowManyTogglesAnswers } from "~/content/11.1.how-many-toggles-answers";
 import { CleaningUp } from "~/content/11.2.cleaning-up";
-import { OptimiseCleanup0 } from "~/content/12.optimise-cleanup-0";
-import { OptimiseCleanup1 } from "~/content/13.optimise-cleanup-1";
+import { OptimiseCleanup0 } from "~/content/12.0.optimise-cleanup";
+import { OptimiseCleanup1 } from "~/content/12.1.optimise-cleanup";
+import { OptimiseCleanup2 } from "~/content/12.2.optimise-cleanup";
 import { WhyUseFeatureToggles } from "~/content/14.why-use-feature-toggles";
 import { References } from "~/content/15.references";
 import { Hiring } from "~/content/16.hiring";
@@ -48,6 +49,7 @@ export default function Index() {
         <CleaningUp />
         <OptimiseCleanup0 />
         <OptimiseCleanup1 />
+        <OptimiseCleanup2 />
         <WhyUseFeatureToggles />
         <References />
         <Hiring />

@@ -9,7 +9,7 @@
 
 - [x] Dumb font size joke
 - [x] Basically and `if` statement
-- [ ] Categories of toggles
+- [x] Categories of toggles
 
 ## Why use feature toggles
 
@@ -28,7 +28,7 @@
 
 - [x] build time
 - [x] config
-- [ ] Feature Toggles as a Service
+- [x] Feature Toggles as a Service
   - [x] Launch Darkly
   - [ ] Unleash
   - [ ] custom
@@ -44,6 +44,7 @@
   - [ ] start of feature
   - [ ] every story
 - [x] cleaning up toggles
+  - [x] branch by abstraction
 - [x] nested/dependent toggles
 - [ ] runtime toggles
 - [x] testing toggles
