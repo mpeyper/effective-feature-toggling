@@ -1,5 +1,6 @@
 import { Slide } from "~/ui/slide";
 import { TitleHeader } from "~/ui/typography/title-header";
+import { Text } from "~/ui/typography/text";
 
 export function Title() {
   return (
@@ -9,6 +10,7 @@ export function Title() {
         <br />
         Feature Toggling
       </TitleHeader>
+      <Text font="font-header" color="text-sky-600" size="text-7xl" className="absolute bottom-48 left-80">Michael Peyper</Text>
       <Image />
     </Slide>
   );

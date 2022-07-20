@@ -1,3 +1,4 @@
+import lexiconLogo from "../images/lexicon-logo.png";
 import { Title } from "~/content/0.title";
 import { Agenda } from "~/content/1.0.agenda";
 import { Categories } from "~/content/1.1.categories";
@@ -25,31 +26,36 @@ import { Questions } from "~/content/17.questions";
 
 export default function Index() {
   return (
-    <main className="h-screen overflow-scroll scroll-smooth snap-mandatory snap-y">
-      <Title />
-      <Agenda />
-      <Categories />
-      <TheProblem0 />
-      <TheProblem1 />
-      <TheSolution />
-      <WhenNotToFeatureToggle />
-      <WhenNotToFeatureToggleAnswers />
-      <SettingToggles />
-      <EncapsulateChecks />
-      <EnablingCICD />
-      <HandlingEnvironments />
-      <TypesOfToggles />
-      <FeatureToggleAsAService />
-      <TestingToggles />
-      <HowManyToggles />
-      <HowManyTogglesAnswers />
-      <CleaningUp />
-      <OptimiseCleanup0 />
-      <OptimiseCleanup1 />
-      <WhyUseFeatureToggles />
-      <References />
-      <Hiring />
-      <Questions />
-    </main>
+    <>
+      <main className="h-screen overflow-scroll scroll-smooth snap-mandatory snap-y">
+        <Title />
+        <Agenda />
+        <Categories />
+        <TheProblem0 />
+        <TheProblem1 />
+        <TheSolution />
+        <WhenNotToFeatureToggle />
+        <WhenNotToFeatureToggleAnswers />
+        <SettingToggles />
+        <EncapsulateChecks />
+        <EnablingCICD />
+        <HandlingEnvironments />
+        <TypesOfToggles />
+        <FeatureToggleAsAService />
+        <TestingToggles />
+        <HowManyToggles />
+        <HowManyTogglesAnswers />
+        <CleaningUp />
+        <OptimiseCleanup0 />
+        <OptimiseCleanup1 />
+        <WhyUseFeatureToggles />
+        <References />
+        <Hiring />
+        <Questions />
+      </main>
+      <footer className="absolute z-10 right-0 bottom-0 mr-2 flex flex-row gap-2">
+        <img className="w-32" src={lexiconLogo} alt="Lexicon" />
+      </footer>
+    </>
   );
 }
