@@ -24,7 +24,7 @@ if (newThingEnabled) {
 }
 `;
 
-export function TheSolution() {
+export function TheSolution0() {
   return (
     <Slide>
       <ToggleTab feature="FEATURE_SOLUTION">
