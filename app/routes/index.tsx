@@ -20,10 +20,10 @@ import { CleaningUp } from "~/content/11.2.cleaning-up";
 import { OptimiseCleanup0 } from "~/content/12.0.optimise-cleanup";
 import { OptimiseCleanup1 } from "~/content/12.1.optimise-cleanup";
 import { OptimiseCleanup2 } from "~/content/12.2.optimise-cleanup";
-import { WhyUseFeatureToggles } from "~/content/14.why-use-feature-toggles";
-import { References } from "~/content/15.references";
-import { Hiring } from "~/content/16.hiring";
-import { Questions } from "~/content/17.questions";
+import { WhyUseFeatureToggles } from "~/content/13.why-use-feature-toggles";
+import { References } from "~/content/14.references";
+import { Hiring } from "~/content/15.hiring";
+import { Questions } from "~/content/16.questions";
 
 export default function Index() {
   return (
