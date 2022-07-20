@@ -9,32 +9,44 @@ const points = [
 ];
 
 const example = `
-describe.each([
-  { features: { THE_FEATURE: true } },
-  { features: { THE_FEATURE: false } },
-])('the feature tests', ({ features }) => {
-  beforeEach(() => {
-    jest.spyOn(utils, 'isFeatureEnabled')
-      .mockImplementation((key => features[key]))
-  })
+describe('the feature tests', () => {
+  describe('toggled on', () => {
+    beforeEach(() => {
+      jest.spyOn(utils, 'isFeatureEnabled')
+        .mockImplementation(() => true);
+    });
 
-  test('works as expected', () => {
-    // ...
-  })
-})
+    test('works as expected', () => {
+      // ...
+    });
+  });
+
+  describe('toggled off', () => {
+    beforeEach(() => {
+      jest.spyOn(utils, 'isFeatureEnabled')
+        .mockImplementation(() => false);
+    });
+
+    test('works as expected', () => {
+      // ...
+    });
+  });
+});
 `;
 
 export function TestingToggles() {
   return (
     <Slide>
       <SlideHeader>Tip — Testing Toggles</SlideHeader>
-      <SideBySide
-        columns={10}
-        leftSpan={4}
-        rightSpan={6}
-        left={<DotPoints points={points} />}
-        right={<CodeExample code={example} language="javascript" />}
-      />
+      <div className="w-full mt-20">
+        <SideBySide
+          columns={10}
+          leftSpan={4}
+          rightSpan={6}
+          left={<DotPoints points={points} />}
+          right={<CodeExample code={example} language="javascript" />}
+        />
+      </div>
     </Slide>
   );
 }

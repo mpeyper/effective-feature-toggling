@@ -17,19 +17,21 @@ flowchart LR
   A --> B
   B --> C
   C --> D
-  J -.- D
   D --> E
   D --> F
   D --> G
   D --> H
   D --> I
+  J -.- D
 `;
 
 export function EnablingCICD() {
   return (
     <Slide>
       <SlideHeader>Enabling CI/CD</SlideHeader>
-      <Diagram nodes={diagram} />
+      <div className="scale-125 transform-gpu">
+        <Diagram nodes={diagram} />
+      </div>
     </Slide>
   );
 }
