@@ -1,13 +1,10 @@
-import { useState, useMemo } from "react";
-import * as ini from "ini";
 import { Slide } from "~/ui/slide";
-import { Drawer } from "~/ui/layout/drawers";
 import { SlideHeader } from "~/ui/typography/slide-header";
-import { ScaledContent } from "~/ui/animation/ScaledContent";
 import { FadedContent } from "~/ui/animation/FadedContent";
 import { CodeExample } from "~/ui/code-example";
 import { SideBySide } from "~/ui/layout/side-by-side";
 import { DotPoints } from "~/ui/typography/dot-points";
+import { ToggleTab } from "~/ui/toggle-tab";
 
 const points = [
   <>
@@ -27,59 +24,25 @@ if (newThingEnabled) {
 }
 `;
 
-const initialFeatures = `
-PRESENTATION_MODE=false
-`;
-
-function useFeatureEnabled(key: string) {
-  const [featuresIni, setFeaturesIni] = useState(initialFeatures);
-
-  const features = useMemo(() => {
-    return ini.parse(featuresIni);
-  }, [featuresIni]);
-
-  const config = useMemo(
-    () => ({
-      text: featuresIni,
-      setText: setFeaturesIni,
-    }),
-    [featuresIni]
-  );
-
-  return [features[key] === true, config] as const;
-}
-
 export function TheSolution() {
-  const [presentationModeEnabled, config] =
-    useFeatureEnabled("PRESENTATION_MODE");
-
   return (
     <Slide>
-      <Drawer>
-        <div>
-          <div className="w-1/2 h-full bg-[#1e1e1e] absolute" aria-hidden />
-          <div
-            className="w-full h-1/2 bottom-0 bg-[#1e1e1e] absolute"
-            aria-hidden
-          />
-          <CodeExample
-            code={config.text}
-            language="ini"
-            suggestions={false}
-            onChange={config.setText}
-          />
-        </div>
-      </Drawer>
-      <SlideHeader>The solution: Feature Toggles</SlideHeader>
-      <ScaledContent enabled={presentationModeEnabled}>
-        <SideBySide
-          left={<DotPoints points={points} />}
-          right={<CodeExample code={example} language="javascript" />}
-        />
-      </ScaledContent>
-      <FadedContent enabled={presentationModeEnabled}>
-        <Image />
-      </FadedContent>
+      <ToggleTab feature="FEATURE_SOLUTION">
+        {(solutionEnabled) => (
+          <>
+            <FadedContent enabled={solutionEnabled}>
+              <SlideHeader>The solution: Feature Toggles</SlideHeader>
+              <div className="w-full h-full flex flex-col items-center justify-center">
+                <SideBySide
+                  left={<DotPoints points={points} />}
+                  right={<CodeExample code={example} language="javascript" />}
+                />
+              </div>
+              <Image />
+            </FadedContent>
+          </>
+        )}
+      </ToggleTab>
     </Slide>
   );
 }

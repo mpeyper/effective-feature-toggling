@@ -5,7 +5,7 @@ type Props = {
   color?: string;
 };
 
-export function DotPoints({ points, color = 'text-slate-300' }: Props) {
+export function DotPoints({ points, color = "text-slate-300" }: Props) {
   return (
     <ul className="list-disc">
       {points.map((point, index) => (
