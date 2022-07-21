@@ -11,6 +11,9 @@ feel free to take a look around and see how it all came together.
 - [Mermaid JS](http://mermaid-js.github.io/mermaid/)
 - [LaunchDarkly](https://launchdarkly.com/)
 
+Also, shout out to [unDraw](https://undraw.co/) for providing the fun little
+illustrations used to make things look a little less boring.
+
 ## Running locally
 
 From your terminal:
