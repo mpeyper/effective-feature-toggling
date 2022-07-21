@@ -8,20 +8,9 @@ import { Stacked } from "~/ui/layout/stacked";
 import { config } from "~/config";
 
 const pros = [
-  <>
-    Any type of toggles you want, out
-    <br />
-    of the box
-  </>,
-  <>
-    Updating toggles is no longer a<br />
-    technical task
-  </>,
-  <>
-    Can enable even more advanced
-    <br />
-    toggling strategies
-  </>,
+  "Any type of toggles you want, out of the box",
+  "Updating toggles is no longer a technical task",
+  "Can enable even more advanced toggling strategies",
 ];
 
 const cons = ["It's quite expensive", "No on-premise option"];
@@ -68,7 +57,7 @@ export function FeatureToggleAsAService() {
                 alt="LaunchDarkly logo"
                 src="https://swingsearch.com/wp-content/uploads/2019/09/launch-darkly-logo-ffe2fd56201aa3b06b59d81367ca3d03.png"
               />
-              <p className="font-data text-5xl leading-relaxed">&nbsp;</p>
+              <p className="font-data text-5xl leading-relaxed">&nbsp;<br />&nbsp;</p>
             </Stacked>
           }
         />
