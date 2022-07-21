@@ -9,11 +9,10 @@ flowchart LR
   C(Main Branch)
   D([Deployments])
   E(Dev)
-  F(QA)
-  G(UAT)
-  H(Staging)
-  I(Production)
-  J[Feature toggles control<br />which features are<br />available in each environment]
+  F(Test)
+  G(Staging)
+  H(Production)
+  I[Feature toggles control<br />which features are<br />available in each environment]
   A --> B
   B --> C
   C --> D
@@ -21,8 +20,7 @@ flowchart LR
   D --> F
   D --> G
   D --> H
-  D --> I
-  J -.- D
+  I -.- D
 `;
 
 export function EnablingCICD() {

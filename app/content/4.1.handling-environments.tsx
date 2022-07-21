@@ -5,66 +5,54 @@ import { CodeExample } from "~/ui/code-example";
 const localConfig = `
 ENVIRONMENT_NAME=local
 
-FEATURE_RELEASED=true
-FEATURE_SIGNED_OFF=true
-FEATURE_PASSED_QA=true
-FEATURE_IN_DEV=true
+FEATURE_ALREADY_RELEASED=true
+FEATURE_SOMETHING_NEW=true
 `;
 
 const devConfig = `
 ENVIRONMENT_NAME=dev
 
-FEATURE_RELEASED=true
-FEATURE_SIGNED_OFF=true
-FEATURE_PASSED_QA=true
-FEATURE_IN_DEV=true
+FEATURE_ALREADY_RELEASED=true
+FEATURE_SOMETHING_NEW=false
 `;
 
-const qaConfig = `
-ENVIRONMENT_NAME=qa
+const testConfig = `
+ENVIRONMENT_NAME=test
 
-FEATURE_RELEASED=true
-FEATURE_SIGNED_OFF=true
-FEATURE_PASSED_QA=true
-FEATURE_IN_DEV=false
-`;
-
-const uatConfig = `
-ENVIRONMENT_NAME=uat
-
-FEATURE_RELEASED=true
-FEATURE_SIGNED_OFF=true
-FEATURE_PASSED_QA=false
-FEATURE_IN_DEV=false
+FEATURE_ALREADY_RELEASED=true
+FEATURE_SOMETHING_NEW=false
 `;
 
 const stagingConfig = `
 ENVIRONMENT_NAME=staging
 
-FEATURE_RELEASED=true
-FEATURE_SIGNED_OFF=false
-FEATURE_PASSED_QA=false
-FEATURE_IN_DEV=false
+FEATURE_ALREADY_RELEASED=true
+FEATURE_SOMETHING_NEW=false
+`;
+
+const demoConfig = `
+ENVIRONMENT_NAME=demo
+
+FEATURE_ALREADY_RELEASED=true
+FEATURE_SOMETHING_NEW=false
 `;
 
 const prodConfig = `
 ENVIRONMENT_NAME=production
 
-FEATURE_RELEASED=true
-FEATURE_SIGNED_OFF=false
-FEATURE_PASSED_QA=false
-FEATURE_IN_DEV=false
+FEATURE_ALREADY_RELEASED=true
+FEATURE_SOMETHING_NEW=false
 `;
 
 export function HandlingEnvironments() {
   return (
     <Slide>
       <SlideHeader>Rolling features through environments</SlideHeader>
-        <div className="grid grid-cols-3 gap-5 w-full p-20">
+        <div className="grid grid-cols-2 gap-5 w-full p-20">
           <CodeExample code={localConfig} language='ini' />
           <CodeExample code={devConfig} language='ini' />
-          <CodeExample code={qaConfig} language='ini' />
-          <CodeExample code={uatConfig} language='ini' />
+          <CodeExample code={testConfig} language='ini' />
+          <CodeExample code={demoConfig} language='ini' />
           <CodeExample code={stagingConfig} language='ini' />
           <CodeExample code={prodConfig} language='ini' />
         </div>

@@ -6,10 +6,11 @@ export function References() {
   return (
     <Slide>
       <SlideHeader>Further Reading</SlideHeader>
-      <div className="mb-48">
+      <div className="mb-56">
         <Text>https://martinfowler.com/articles/feature-toggles.html</Text>
         <Text>https://www.atlassian.com/continuous-delivery/principles/feature-flags</Text>
         <Text>https://resources.launchdarkly.com</Text>
+        <Text>https://github.com/mpeyper/effective-feature-toggling</Text>
       </div>
       <Image />
     </Slide>
